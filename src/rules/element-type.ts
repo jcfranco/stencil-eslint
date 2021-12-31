@@ -1,5 +1,4 @@
 import { Rule } from 'eslint';
-// @ts-ignore
 import { getDecorator, getType, parseDecorator, stencilComponentContext } from 'stencil-eslint-core';
 
 const rule: Rule.RuleModule = {

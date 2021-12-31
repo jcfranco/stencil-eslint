@@ -1,5 +1,4 @@
 import rule from '../../../../src/rules/required-jsdoc';
-// @ts-ignore
 import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';

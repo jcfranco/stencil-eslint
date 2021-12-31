@@ -1,6 +1,5 @@
 import { Rule } from 'eslint';
 import ts from 'typescript';
-// @ts-ignore
 import { isPrivate, stencilComponentContext, stencilDecorators, stencilLifecycle } from 'stencil-eslint-core';
 
 const rule: Rule.RuleModule = {

@@ -1,5 +1,4 @@
 import rule from '../../../../src/rules/own-props-must-be-private';
-// @ts-ignore
 import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
