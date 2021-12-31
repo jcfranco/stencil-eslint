@@ -1,6 +1,7 @@
 import { Rule } from 'eslint';
 import ts from 'typescript';
-import { getDecorator, isPrivate, stencilComponentContext } from '../utils';
+// @ts-ignore
+import { getDecorator, isPrivate, stencilComponentContext } from 'stencil-eslint-core';
 
 const varsList = new Set<string>();
 

@@ -8,7 +8,8 @@
 //------------------------------------------------------------------------------
 import ts from 'typescript';
 import { Rule } from 'eslint';
-import { stencilComponentContext } from '../utils';
+// @ts-ignore
+import { stencilComponentContext } from 'stencil-eslint-core';
 
 const rule: Rule.RuleModule = {
   meta: {

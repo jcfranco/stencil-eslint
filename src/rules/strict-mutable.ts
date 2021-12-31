@@ -1,5 +1,6 @@
 import { Rule } from 'eslint';
-import { parseDecorator, stencilComponentContext } from '../utils';
+// @ts-ignore
+import { parseDecorator, stencilComponentContext } from 'stencil-eslint-core';
 
 const mutableProps = new Map<string, any>();
 const rule: Rule.RuleModule = {

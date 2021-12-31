@@ -1,6 +1,7 @@
 import { Rule } from 'eslint';
 import ts from 'typescript';
-import { getDecorator } from '../utils';
+// @ts-ignore
+import { getDecorator } from 'stencil-eslint-core';
 
 const rule: Rule.RuleModule = {
   meta: {

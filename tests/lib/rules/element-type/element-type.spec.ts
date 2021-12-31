@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/element-type';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -10,7 +11,7 @@ describe('stencil rules', () => {
   };
   const validCode = fs.readFileSync(files.good, 'utf8');
 
-  ruleTester.run('element-type', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('element-type', rule, {
     valid: [
       {
         code: validCode,

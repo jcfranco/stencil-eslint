@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/props-must-be-readonly';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -10,7 +11,7 @@ describe('stencil rules', () => {
   };
   const validCode = fs.readFileSync(files.good, 'utf8');
 
-  ruleTester.run('props-must-be-readonly', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('props-must-be-readonly', rule, {
     valid: [
       {
         code: validCode,

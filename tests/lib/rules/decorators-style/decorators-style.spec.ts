@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/decorators-style';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -17,7 +18,7 @@ describe('stencil rules', () => {
     watch: 'multiline',
     listen: 'multiline'
   }];
-  ruleTester.run('decorators-style', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('decorators-style', rule, {
     valid: [
       {
         code: fs.readFileSync(files.good, 'utf8'),

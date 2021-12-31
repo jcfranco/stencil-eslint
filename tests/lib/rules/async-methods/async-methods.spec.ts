@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/async-methods';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -10,7 +11,7 @@ describe('stencil rules', () => {
   };
   const validCode = fs.readFileSync(files.good, 'utf8');
 
-  ruleTester.run('async-methods', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('async-methods', rule, {
     valid: [
       {
         code: validCode,

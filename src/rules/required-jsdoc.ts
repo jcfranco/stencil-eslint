@@ -1,5 +1,6 @@
 import { Rule } from 'eslint';
-import { getDecorator, stencilComponentContext } from '../utils';
+// @ts-ignore
+import { getDecorator, stencilComponentContext } from 'stencil-eslint-core';
 
 const DECORATORS = ['Prop', 'Method', 'Event'];
 const INVALID_TAGS = ['type', 'memberof'];

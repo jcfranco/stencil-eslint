@@ -1,5 +1,6 @@
 import { Rule } from 'eslint';
-import { isPrivate, stencilComponentContext, stencilDecorators } from '../utils';
+// @ts-ignore
+import { isPrivate, stencilComponentContext, stencilDecorators } from 'stencil-eslint-core';
 
 const rule: Rule.RuleModule = {
   meta: {

@@ -1,6 +1,7 @@
 import { Rule } from 'eslint';
 import ts from 'typescript';
-import { decoratorName, getDecorator, stencilComponentContext, stencilDecorators } from '../utils';
+// @ts-ignore
+import { decoratorName, getDecorator, stencilComponentContext, stencilDecorators } from 'stencil-eslint-core';
 
 type DecoratorsStyleOptionsEnum = 'inline' | 'multiline' | 'ignore';
 

@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/class-pattern';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -9,7 +10,7 @@ describe('stencil rules', () => {
     wrong: path.resolve(__dirname, 'class-pattern.wrong.tsx')
   };
   const options = [{ pattern: '^(?!NoStart).*Component$', ignoreCase: true }];
-  ruleTester.run('class-pattern', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('class-pattern', rule, {
     valid: [
       {
         code: fs.readFileSync(files.good, 'utf8'),

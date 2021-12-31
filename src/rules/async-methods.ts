@@ -1,6 +1,7 @@
 import { Rule } from 'eslint';
 import ts from 'typescript';
-import { stencilComponentContext } from '../utils';
+// @ts-ignore
+import { stencilComponentContext } from 'stencil-eslint-core';
 import { isThenableType } from 'tsutils';
 
 const rule: Rule.RuleModule = {

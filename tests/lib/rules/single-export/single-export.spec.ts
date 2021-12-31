@@ -1,5 +1,6 @@
 import rule from '../../../../src/rules/single-export';
-import { ruleTester } from '../rule-tester';
+// @ts-ignore
+import { ruleTester } from 'stencil-eslint-core';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -8,7 +9,7 @@ describe('stencil rules', () => {
     good: path.resolve(__dirname, 'single-export.good.tsx'),
     wrong: path.resolve(__dirname, 'single-export.wrong.tsx')
   };
-  ruleTester.run('single-export', rule, {
+  ruleTester(path.resolve(__dirname, '../../../tsconfig.json')).run('single-export', rule, {
     valid: [
       {
         code: fs.readFileSync(files.good, 'utf8'),
